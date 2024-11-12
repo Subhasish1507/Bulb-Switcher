@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+class Solution 
+{
+    public int bulbSwitch(int n) 
+    {
+       int count = 0;
+
+       int i = 1;
+       while(i*i <= n)
+       {
+            count++;
+            i++;
+       }
+       return count;        
+    }
+
+    public static void main(String[] args) 
+    {
+        Solution sl = new Solution();
+        int n ;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the no of bulbs : ");
+        n = input.nextInt();
+        int onBulb = sl.bulbSwitch(n);
+        System.out.println(onBulb + " bulb are remain on still in the last round");
+    }
+}
